@@ -5,7 +5,6 @@ type CountdownProps = {
 }
 
 export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
-  const [timeLeft, setTimeLeft] = React.useState('');
   const [hours, setHours] = React.useState(0);
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
@@ -17,7 +16,6 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
       if (distance <= 0) {
         clearInterval(interval);
-        setTimeLeft('Бастауға аз қалды!');
       } else {
         setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
         setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
@@ -49,11 +47,11 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
   return (
     <p>
-      {date_numbers.map((num, i) => (
+      {seconds > 0 ? date_numbers.map((num, i) => (
         <span key={i} style={{ ["--delay" as any]: `${START_DELAY}.${i}s` }}>
           {String(num.number).padStart(2, "0")}{num.label}{' '}
         </span>
-      ))}
+      )) : <span>Бастауымызға аз қалды...</span>}
     </p>
   )
 };
