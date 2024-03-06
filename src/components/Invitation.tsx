@@ -2,13 +2,19 @@ import React from "react";
 import { Countdown } from "./Countdown";
 
 export const InvitationPage = () => {
+  React.useEffect(() => {
+    if(typeof document !== "undefined") {
+      document.body.classList.add("bg-black");
+    }
+  }, []);
+
   const START_DELAY = 3;
   const sentences = [
     ["Квест", "өтуге", "шақыру"],
     ["07.03", "|", "444 каб", "|", "17:00"],
   ]
   return (
-    <main>
+    <main className=" bg-black text-white flex items-end justify-center min-h-lvh overflow-hidden">
       <div className="invitation_text">
         {sentences.map((sentence, i) => (
           <h1 key={i}>
