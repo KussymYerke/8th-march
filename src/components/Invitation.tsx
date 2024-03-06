@@ -14,7 +14,7 @@ export const InvitationPage = () => {
     ["07.03", "|", "444 каб", "|", "17:00"],
   ]
   return (
-    <main className=" bg-black text-white flex items-end justify-center min-h-lvh overflow-hidden">
+    <main className=" bg-black text-white flex items-end justify-center min-h-svh overflow-hidden">
       <div className="invitation_text">
         {sentences.map((sentence, i) => (
           <h1 key={i}>
