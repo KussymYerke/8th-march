@@ -10,8 +10,8 @@ export const InvitationPage = () => {
 
   const START_DELAY = 3;
   const sentences = [
-    ["Квест", "өтуге", "шақыру"],
-    ["07.03", "|", "444 каб", "|", "19:00"],
+    ["Алдынмен", "Артынмен", "8 мартынмен"],
+    ["07.03", "|", "777 каб", "|", "17:45"],
   ]
   return (
     <main className=" bg-black text-white flex items-end justify-center min-h-svh overflow-hidden">
@@ -24,7 +24,7 @@ export const InvitationPage = () => {
           </h1>
         ))}
         <div className="py-8" />
-        <Countdown targetDate={new Date(2024, 2, 7, 19)} />
+        <Countdown targetDate={new Date(2024, 2, 7, 18, 45)} />
       </div>
       <div className="night"></div>
       <div className="flowers">
