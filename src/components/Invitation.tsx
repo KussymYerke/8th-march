@@ -11,7 +11,7 @@ export const InvitationPage = () => {
   const START_DELAY = 3;
   const sentences = [
     ["Квест", "өтуге", "шақыру"],
-    ["07.03", "|", "444 каб", "|", "17:00"],
+    ["07.03", "|", "444 каб", "|", "19:00"],
   ]
   return (
     <main className=" bg-black text-white flex items-end justify-center min-h-svh overflow-hidden">
