@@ -24,7 +24,7 @@ export const InvitationPage = () => {
           </h1>
         ))}
         <div className="py-8" />
-        <Countdown targetDate={new Date(2024, 2, 7, 17)} />
+        <Countdown targetDate={new Date(2024, 2, 7, 19)} />
       </div>
       <div className="night"></div>
       <div className="flowers">
